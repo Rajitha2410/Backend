@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>User Search Result</h2>
+    <p id="output"></p>
+
+    <script>
+        const users = [
+            { name: "Bala", role: "Developer" },
+            { name: "Arun", role: "Designer" },
+            { name: "Kumar", role: "Tester" }
+        ];
+
+        let result = "";
+
+        for (const { name, role } of users) {
+            result += `${name} - ${role}\n`;
+        }
+
+        document.getElementById("output").innerText = result;
+    </script>
+</body>
+</html>

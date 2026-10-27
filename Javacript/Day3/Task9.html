@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>User Details</h2>
+    <p id="output"></p>
+
+    <script>
+        const createUser = (
+            name = "Guest",
+            age = 18,
+            city = "Unknown"
+        ) => {
+            return `${name}
+${age}
+${city}`;
+        };
+
+        const user1 = createUser("Bala", 25, "Chennai");
+        const user2 = createUser("Bala");
+
+        document.getElementById("output").innerText =
+            `User 1:
+${user1}
+
+User 2:
+${user2}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Message</title>
+</head>
+<body>
+
+    <h2>User Profile</h2>
+    <p id="message"></p>
+
+    <script>
+        const name = "Bala";
+        const age = 25;
+        const city = "Chennai";
+        const role = "Frontend Developer";
+
+        const message = `Hello, my name is ${name}.
+        I am ${age} years old.
+        I live in ${city}.
+        I am a ${role}.`;
+
+        document.getElementById("message").innerText = message;
+    </script>
+
+</body>
+</html>

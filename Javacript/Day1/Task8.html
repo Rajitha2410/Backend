@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Admin Check</title>
+</head>
+<body>
+    <script>
+        let isLoggedIn = true;
+        let isAdmin = false;
+
+        if (isLoggedIn && isAdmin) {
+            document.write("Admin Dashboard");
+        } else if (isLoggedIn) {
+            document.write("User Dashboard");
+        } else {
+            document.write("Please Login");
+        }
+    </script>
+</body>
+</html>

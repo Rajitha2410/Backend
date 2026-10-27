@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Copy and Update User</h2>
+    <p id="output"></p>
+
+    <script>
+        const user = {
+            name: "Bala",
+            age: 25,
+            role: "Developer"
+        };
+
+        const updatedUser = {
+            ...user,
+            age: 26,
+            role: "Senior Developer"
+        };
+
+        const message = `Original:
+${user.name}
+${user.age}
+${user.role}
+
+Updated:
+${updatedUser.name}
+${updatedUser.age}
+${updatedUser.role}`;
+
+        document.getElementById("output").innerText = message;
+    </script>
+</body>
+</html>

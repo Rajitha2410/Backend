@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Shopping Cart Total</h2>
+    <p id="output"></p>
+
+    <script>
+        const calculateTotal = (...prices) => {
+            return prices.reduce((total, price) => total + price, 0);
+        };
+
+        const result1 = calculateTotal(100, 200, 300);
+        const result2 = calculateTotal(50, 100);
+        const result3 = calculateTotal(100, 200, 300, 400);
+
+        document.getElementById("output").innerText =
+            `Total 1: ${result1}
+Total 2: ${result2}
+Total 3: ${result3}`;
+    </script>
+</body>
+</html>

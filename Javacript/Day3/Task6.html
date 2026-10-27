@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Product List</h2>
+    <p id="output"></p>
+
+    <script>
+        const products1 = ["Laptop", "Mouse"];
+        const products2 = ["Keyboard", "Monitor"];
+
+        const allProducts = [...products1, ...products2];
+
+        document.getElementById("output").innerText =
+            JSON.stringify(allProducts);
+    </script>
+</body>
+</html>

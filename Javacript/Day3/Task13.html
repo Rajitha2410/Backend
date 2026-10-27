@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Login System</h2>
+    <p id="output"></p>
+
+    <script>
+        const user = {
+            name: "Bala",
+            role: "Admin",
+            isLoggedIn: true
+        };
+
+        const checkLogin = ({ name, role, isLoggedIn }) => {
+            if (isLoggedIn) {
+                return `Welcome ${name}
+Role: ${role}`;
+            } else {
+                return "Please Login";
+            }
+        };
+
+        document.getElementById("output").innerText =
+            checkLogin(user);
+    </script>
+</body>
+</html>

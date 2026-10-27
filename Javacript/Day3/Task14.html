@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Product Data Processor</h2>
+    <p id="output"></p>
+
+    <script>
+        const product = {
+            name: "Laptop",
+            price: 60000,
+            category: "Electronics"
+        };
+
+        const getProductInfo = ({ name, price, category }) => {
+            return `Product: ${name}
+Price: ₹${price}
+Category: ${category}`;
+        };
+
+        const updatedProduct = {
+            ...product,
+            price: 65000
+        };
+
+        const result = `${getProductInfo(product)}
+
+Updated Product:
+Product: ${updatedProduct.name}
+Price: ₹${updatedProduct.price}
+Category: ${updatedProduct.category}
+
+Original Price: ₹${product.price}`;
+
+        document.getElementById("output").innerText = result;
+    </script>
+</body>
+</html>

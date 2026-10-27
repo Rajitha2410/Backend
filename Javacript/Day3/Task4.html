@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Student Profile</h2>
+    <p id="output"></p>
+
+    <script>
+        const student = {
+            name: "Bala",
+            age: 25,
+            course: "JavaScript",
+            city: "Chennai"
+        };
+
+        const displayStudent = ({ name, age, course, city }) => {
+            return `Student: ${name}
+Age: ${age}
+Course: ${course}
+City: ${city}`;
+        };
+
+        document.getElementById("output").innerText =
+            displayStudent(student);
+    </script>
+</body>
+</html>

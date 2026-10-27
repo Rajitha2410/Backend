@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Safe User Profile</h2>
+    <p id="output"></p>
+
+    <script>
+        const user = {
+            name: "Bala",
+            age: 25
+        };
+
+        const getCity = () => {
+            return user.address?.city ?? "Unknown City";
+        };
+
+        const result1 = getCity();
+
+        user.address = {
+            city: "Chennai"
+        };
+
+        const result2 = getCity();
+
+        document.getElementById("output").innerText =
+            `Before adding address:
+${result1}
+
+After adding address:
+${result2}`;
+    </script>
+</body>
+</html>

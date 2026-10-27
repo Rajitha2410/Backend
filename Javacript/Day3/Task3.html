@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Greeting</title>
+</head>
+<body>
+
+    <h2>User Greeting</h2>
+    <p id="output"></p>
+
+    <script>
+        const greetUser = (name, role = "Developer") => {
+            return `Hello ${name}, you are a ${role}.`;
+        };
+
+        const message1 = greetUser("Bala", "Frontend Developer");
+        const message2 = greetUser("Bala");
+
+        document.getElementById("output").innerText =
+            message1 + "\n" + message2;
+    </script>
+
+</body>
+</html>

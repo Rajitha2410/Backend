@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile System</title>
+</head>
+<body>
+
+    <h2>User Profile System</h2>
+    <pre id="output"></pre>
+
+    <script>
+        const user = {
+            name: "Bala",
+            age: 25,
+            role: "Frontend Developer",
+            address: {
+                city: "Chennai"
+            }
+        };
+
+        // FUNCTION 1 — getUserName()
+        const getUserName = ({ name }) => {
+            return name;
+        };
+
+        // FUNCTION 2 — getUserLocation()
+        const getUserLocation = () => {
+            return user.address?.city ?? "Unknown";
+        };
+
+        // FUNCTION 3 — getUserMessage()
+        const getUserMessage = ({ name, age, role, address }) => {
+            const city = address?.city ?? "Unknown";
+            return `${name} is a ${age} year old ${role} from ${city}.`;
+        };
+
+        // FUNCTION 4 — updateUser()
+        const updateUser = () => {
+            return {
+                ...user,
+                age: 26,
+                role: "Senior Frontend Developer"
+            };
+        };
+
+        // FUNCTION 5 — printUsers()
+        const users = [
+            user,
+            {
+                name: "Arun",
+                age: 30,
+                role: "Backend Developer"
+            },
+            {
+                name: "Kumar",
+                age: 28,
+                role: "Tester"
+            }
+        ];
+
+        const printUsers = () => {
+            let result = "";
+
+            for (const { name, role } of users) {
+                result += `${name} - ${role}\n`;
+            }
+
+            return result;
+        };
+
+        const updatedUser = updateUser();
+
+        const output = `FUNCTION 1 — User Name
+${getUserName(user)}
+
+FUNCTION 2 — User Location
+${getUserLocation()}
+
+FUNCTION 3 — User Message
+${getUserMessage(user)}
+
+FUNCTION 4 — Updated User
+Age: ${updatedUser.age}
+Role: ${updatedUser.role}
+
+Original User
+Age: ${user.age}
+Role: ${user.role}
+
+FUNCTION 5 — Print Users
+${printUsers()}`;
+
+        document.getElementById("output").innerText = output;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Product Price Calculator</h2>
+    <p id="output"></p>
+
+    <script>
+        const product = {
+            name: "Laptop",
+            price: 60000,
+            quantity: 2
+        };
+
+        const calculatePrice = ({ name, price, quantity }) => {
+            const total = price * quantity;
+
+            return `${name}
+Price: ${price}
+Quantity: ${quantity}
+Total: ${total}`;
+        };
+
+        document.getElementById("output").innerText =
+            calculatePrice(product);
+    </script>
+</body>
+</html>

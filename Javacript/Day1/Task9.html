@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Balance</title>
+</head>
+<body>
+    <script>
+        let balance = 1000;
+        let price = 300;
+
+        if (balance >= price) {
+            document.write("Purchase successful<br>");
+            balance -= price;
+            document.write("Remaining balance: " + balance);
+        } else {
+            document.write("Insufficient balance");
+        }
+    </script>
+</body>
+</html>
