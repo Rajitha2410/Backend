@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 - Product Discount</title>
+</head>
+<body>
+    <h2>Product Price Calculation</h2>
+    <p id="result"></p>
+
+    <script>
+        let price = 5000;
+
+        let discount = new Promise((resolve, reject) => {
+            if (price > 0) {
+                let discountedPrice = price - (price * 10 / 100);
+                resolve(discountedPrice);
+            } else {
+                reject("Invalid Product Price");
+            }
+        });
+
+        discount
+            .then((result) => {
+                document.getElementById("result").innerHTML =
+                    "Discounted Price: " + result;
+            })
+            .catch((error) => {
+                document.getElementById("result").innerHTML = error;
+            })
+            .finally(() => {
+                console.log("Price calculation completed");
+            });
+    </script>
+</body>
+</html>

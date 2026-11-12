@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Fetch </h2>
+    <script>
+        let number=8
+        const checkNumber=new Promise((resolve,reject)=>{
+        if (number%2 === 0){
+            resolve("even Number");
+        }else{
+            reject("Odd Number");
+        }
+    })
+        checkNumber.then((result) => {
+    console.log(result);
+        })
+
+    checkNumber.catch((error)=>{
+        console.log(error);
+    })
+
+    </script>
+</body>
+</html>

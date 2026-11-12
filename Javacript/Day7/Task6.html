@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8 - Fetch Product</title>
+</head>
+<body>
+    <h2>Product Details</h2>
+    <div id="product"></div>
+    <p id="error"></p>
+
+    <script>
+        async function fetchProduct() {
+            try {
+                let response = await fetch(
+                    "https://dummyjson.com/products/1"
+                );
+
+                if (!response.ok) {
+                    throw new Error("HTTP Error: " + response.status);
+                }
+
+                let data = await response.json();
+
+                document.getElementById("product").innerHTML = `
+                    <h3>Title: ${data.title}</h3>
+                    <p>Price: $${data.price}</p>
+                    <p>Category: ${data.category}</p>
+                `;
+            } catch (error) {
+                document.getElementById("error").innerHTML =
+                    "Error: " + error.message;
+            }
+        }
+
+        fetchProduct();
+    </script>
+</body>
+</html>

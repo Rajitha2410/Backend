@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 - Pass or Fail</title>
+</head>
+<body>
+    <h2>Student Result</h2>
+    <p id="result"></p>
+
+    <script>
+        let mark = 75;
+
+        let result = new Promise((resolve, reject) => {
+            if (mark >= 35) {
+                resolve("Student Passed");
+            } else {
+                reject("Student Failed");
+            }
+        });
+
+        result
+            .then((message) => {
+                document.getElementById("result").innerHTML = message;
+            })
+            .catch((error) => {
+                document.getElementById("result").innerHTML = error;
+            });
+    </script>
+</body>
+</html>
